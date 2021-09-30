@@ -10,7 +10,7 @@ from slack_sdk.errors import SlackApiError
 
 logger = logging.getLogger("slack")
 # 채널 이름에 맞게 수정 필요
-OFFSTAGE_CHANNEL_NAME = "random"
+OFFSTAGE_CHANNEL_NAME = "tmp-offstage-story"
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
