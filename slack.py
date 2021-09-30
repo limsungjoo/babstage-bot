@@ -15,7 +15,7 @@ OFFSTAGE_CHANNEL_NAME = "random"
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Github의 경우 setting -> settings -> Secrets에서 환경 변수 설정
-# 로컬 환경 터미널의 경우 export SLACK_BOT_TOKEN="xoxb-644944378561-1769283547622-F7wq6I6hLJdpyJcm6dvBX9UY"
+# 로컬 환경 터미널의 경우 export SLACK_BOT_TOKEN="blah blah"
 token = os.environ.get("SLACK_BOT_TOKEN")
 # 변경 확인
 
