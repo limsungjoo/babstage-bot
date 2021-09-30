@@ -7,7 +7,7 @@ It connects people on slack by assigning four people to talk. It will follow mee
 It just runs as a GitHub action (cron) with a local DB. So no servers, no DBMS. Just this repository and slack!
 
 ## How to setup 
-![image](https://user-images.githubusercontent.com/901975/108782079-e3647f80-75a5-11eb-811b-dc77dcf0a22a.png)
+![image](https://user-images.githubusercontent.com/13143402/135459038-96a1415c-c2be-44f0-b031-42f7d837dd99.png)
 
 ```bash
 export SLACK_BOT_TOKEN=xoxb-1259930306004-xxx
