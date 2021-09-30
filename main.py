@@ -37,11 +37,11 @@ pub_msg_template = '''
 '''
 
 pub_msg_demand = '''
-안녕하세요:smile: 어김없이 돌아온 OFF 스테이지 봇입니다:robot_face: \n\n
-OFF스테이지는 remote 환경에서 일하는 star들이 소규모로 직접 만날 수 있는 기회를 만들어드려요 :1+::1+:\n\n
-- 참가를 원하시면 원하는 이모지를 아무거나 :star:*오늘 낮 12시 전까지*:star: 달아주세요!!\n
-- 그럼 제가 4명씩 조를 만들어드릴거에요. \n
-- 원하는 시간, 원하는 장소를 정하셔서 점심/저녁/티타임 시간을 가져보세요!!
+안녕하세요:smile: 어김없이 돌아온 OFF 스테이지 봇입니다:robot_face: \n
+OFF스테이지는 remote 환경에서 일하는 star들이 소규모로 직접 만날 수 있는 기회를 만들어드려요 :1+::1+:\n
+1) 참가를 원하시면 원하는 이모지를 아무거나 :star:*오늘 낮 12시 전까지*:star: 달아주세요!!\n
+2) 자동으로 4명씩 조가 편성되어 DM 방이 만들어질 예정입니다. \n
+3) 원하는 시간, 원하는 장소를 정하셔서 점심/저녁/티타임 시간을 가져보세요!!
 '''
 
 if __name__ == '__main__':
@@ -49,8 +49,8 @@ if __name__ == '__main__':
     # 채널에 수요 조사 메시지 발송
     send_pub_msg(pub_msg_demand)
 
-    # 대기 시간(수정 필요)
-    time.sleep(600)
+    # 대기 시간 : 10800(3시간)으로 수정 필요
+    time.sleep(60)
 
     # 이모지를 누른 사람 리스트업
     reactions = get_conversations()[0]["reactions"]
@@ -58,6 +58,7 @@ if __name__ == '__main__':
     for reaction in reactions:
         stars.extend(reaction['users'])
 
+    # 중복 제거
     stars = list(set(stars))
 
     # Open local dbfile and add users
@@ -76,14 +77,6 @@ if __name__ == '__main__':
     for star in stars:
         tmp.append(star)
         cnt += 1
-        if cnt % 4 == 0:
-            weekly.append(tmp)
-            tmp = []
-        if stars.index(star) == len(stars) - 1:
-            weekly.append(tmp)
-
-    pairs = 0
-    # 조마다 DM 보내기(마지막조가 3명 또는 2명 또는 1명인 경우 포함)
     for group in weekly:
         if len(group) == 4:
             msg = msg_template.format(group[0], group[1], group[2], group[3])
