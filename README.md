@@ -19,5 +19,7 @@ or set in repos secrete
 ## Slack bot token scopes
 ![image](https://user-images.githubusercontent.com/13143402/135458892-85e7d48d-abd4-498a-a0e9-60397376ebf4.png)
 
+Please add 'im:write' one more to your bot token scopes.
+
 ## Contributions
 We welcome your help and PR!
