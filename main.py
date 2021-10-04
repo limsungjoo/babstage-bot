@@ -45,7 +45,6 @@ OFF스테이지는 remote 환경에서 일하는 star들이 소규모로 직접 
 '''
 
 if __name__ == '__main__':
-
     # 채널에 수요 조사 메시지 발송
     send_pub_msg(pub_msg_demand)
 
@@ -53,7 +52,13 @@ if __name__ == '__main__':
     time.sleep(60)
 
     # 이모지를 누른 사람 리스트업
-    reactions = get_conversations()[0]["reactions"]
+    con_list = get_conversations()
+    for con in con_list:
+        if 'bot_id' in con:
+            my_list = con
+            break
+
+    reactions = my_list['reactions']
     stars = []
     for reaction in reactions:
         stars.extend(reaction['users'])
