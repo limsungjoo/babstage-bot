@@ -49,7 +49,7 @@ if __name__ == '__main__':
     send_pub_msg(pub_msg_demand)
 
     # 대기 시간 : 10800(3시간)으로 수정 필요
-    time.sleep(60)
+    time.sleep(10800)
 
     # 이모지를 누른 사람 리스트업
     con_list = get_conversations()
