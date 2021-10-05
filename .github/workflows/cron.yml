@@ -49,15 +49,15 @@ jobs:
           pip3 install -r requirements.txt
           python3 main.py
           
-      - name: Commit files
-        run: |
-          git config --local user.email "offstage[bot]@users.noreply.github.com"
-          git config --local user.name "offstage[bot]"
-        # git add *.db
-        # git commit -m "Update the db" -a
+#       - name: Commit files
+#         run: |
+#           git config --local user.email "offstage[bot]@users.noreply.github.com"
+#           git config --local user.name "offstage[bot]"
+#         # git add *.db
+#         # git commit -m "Update the db" -a
     
-      - name: Push changes
-        uses: ad-m/github-push-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+#       - name: Push changes
+#         uses: ad-m/github-push-action@main
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: ${{ github.ref }}
