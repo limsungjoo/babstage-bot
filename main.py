@@ -39,7 +39,7 @@ pub_msg_template = '''
 pub_msg_demand = '''
 안녕하세요:smile: 어김없이 돌아온 OFF 스테이지 봇입니다:robot_face: \n
 OFF스테이지는 remote 환경에서 일하는 star들이 소규모로 직접 만날 수 있는 기회를 만들어드려요 :two_hearts::two_hearts:\n
-1) 참가를 원하시면 원하는 이모지를 아무거나 :star:*오늘 낮 12시 전까지*:star: 달아주세요!!\n
+1) 참가를 원하시면 :star:*3시간 안에*:star: 원하는 이모지를 마구마구 달아주세요!!\n
 2) 자동으로 4명씩 조가 편성되어 DM 방이 만들어질 예정입니다. \n
 3) 원하는 시간, 원하는 장소를 정하셔서 점심/저녁/티타임 시간을 가져보세요!!
 '''
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     send_pub_msg(pub_msg_demand)
 
     # 대기 시간 : 10800(3시간)으로 수정 필요
-    time.sleep(60)
+    time.sleep(10800)
 
     # 이모지를 누른 사람 리스트업
     con_list = get_conversations()
