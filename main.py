@@ -9,7 +9,7 @@ msg_template = '''
 금주 OFF스테이지의 멤버는 <@{}>, <@{}>, <@{}>, <@{}>입니다. 편하게 장소와 시간을 맞춰보신 후~\n
 주말동안 있었던 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번주도 모두 모두 화이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n\n
-멋진 시간 보내신 사진등을 #random 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #tmp-offstage-story 에 올려주세요.\n
 '''
 # 1명일 경우
 msg_template1 = '''
@@ -20,19 +20,19 @@ msg_template2 = '''
 금주 OFF스테이지의 멤버는 <@{}>, <@{}>입니다. 편하게 장소와 시간을 맞춰보신 후~\n
 주말동안 있었던 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번주도 모두 모두 화이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n\n
-멋진 시간 보내신 사진등을 #random 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #tmp-offstage-story 에 올려주세요.\n
 '''
 
 msg_template3 = '''
 금주 OFF스테이지의 멤버는 <@{}>, <@{}>, <@{}>입니다. 편하게 장소와 시간을 맞춰보신 후~\n
 주말동안 있었던 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번주도 모두 모두 화이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n\n
-멋진 시간 보내신 사진등을 #offstage 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #tmp-offstage-story 에 올려주세요.\n
 '''
 
 pub_msg_template = '''
 :tada:이번주에는 총 {} 팀을 OFF스테이지로 초대했습니다 😉:wink: 다양한 팀의 Stars를 만나서 티타임/점심/저녁 시간을 가져보세요.\n\n
-:star:장소는 자유:star: 만약 장소 정하기가 힘드시다면 *온라인에서 런치밋*을 하셔도 Okay입니다!! \n\n
+:star:장소는 자유:star: 만약 장소 정하기가 힘드시다면 온라인에서 모이셔도 Okay입니다!! \n\n
 멋진 시간 보내신 스토리를 사진과 함께 이 채널에 많이 올려주세요:heart:
 '''
 
@@ -104,8 +104,11 @@ if __name__ == '__main__':
             send_mim_msg(group, msg=msg)
             pairs = pairs + 1
         else:
-            msg = msg_template1.format(group[0])
-            send_mim_msg(group, msg=msg)
+            try:
+                msg = msg_template1.format(group[0])
+                send_mim_msg(group, msg=msg)
+            except:
+                pass
         # print(group)
         # DEBUG
         # star1 = 'UKAUCTSCV' # kanghee
