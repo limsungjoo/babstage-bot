@@ -2,21 +2,17 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-<<<<<<< HEAD
-    - cron:  '0 0 * ? 1-5'
-=======
-    - cron:  '0 1 * ? 1-5'
->>>>>>> dc4d3662b96ff76f10971b2c30d7968f6c015f7d
-    # ┌───────────── minute (0 - 59)  
+    - cron: "30 0 * ? 1-5"
+    # ┌───────────── minute (0 - 59)
     # │ ┌───────────── hour (0 - 23)
     # │ │ ┌───────────── day of the month (1 - 31)
     # │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
     # │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
-    # │ │ │ │ │                                   
+    # │ │ │ │ │
     # * * * * *
     # 10:00 am Monday, Korea Standard Time (KST) is 1:00 am Monday, Coordinated Universal Time (UTC)
 
@@ -48,20 +44,20 @@ jobs:
       - name: Run a multi-line script
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-    
+
         run: |
           pip3 install -r requirements.txt
           python3 main.py
-          
-#       - name: Commit files
-#         run: |
-#           git config --local user.email "offstage[bot]@users.noreply.github.com"
-#           git config --local user.name "offstage[bot]"
-#         # git add *.db
-#         # git commit -m "Update the db" -a
-    
-#       - name: Push changes
-#         uses: ad-m/github-push-action@main
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}
+
+      # - name: Commit files
+      #   run: |
+      #     git config --local user.email "offstage[bot]@users.noreply.github.com"
+      #     git config --local user.name "offstage[bot]"
+      #   # git add *.db
+      #   # git commit -m "Update the db" -a
+
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@main
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ github.ref }}
