@@ -6,7 +6,11 @@ name: CI
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
+<<<<<<< HEAD
     - cron:  '0 0 * ? 1-5'
+=======
+    - cron:  '0 1 * ? 1-5'
+>>>>>>> dc4d3662b96ff76f10971b2c30d7968f6c015f7d
     # ┌───────────── minute (0 - 59)  
     # │ ┌───────────── hour (0 - 23)
     # │ │ ┌───────────── day of the month (1 - 31)

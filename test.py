@@ -20,4 +20,9 @@ if __name__ == '__main__':
     for reaction in reactions:
         stars.extend(reaction['users'])
     stars = list(set(stars))
+
+    random.shuffle(stars)
+    random.shuffle(stars)
+    random.shuffle(stars)
+
     print(stars)
