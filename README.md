@@ -27,4 +27,4 @@ Please add 'im:write' one more to your bot token scopes.
 
 ## Contributions
 
-If somebody want to change and need any help, please email 2kanghee1@gmail.com.
+If you have any questions, suggestions or requests, please email 2kanghee1@gmail.com!!
