@@ -10,7 +10,7 @@ from slack_sdk.errors import SlackApiError
 
 logger = logging.getLogger("slack")
 # 채널 이름에 맞게 수정 필요
-OFFSTAGE_CHANNEL_NAME = "tmp-offstage-story"
+BABSTAGE_CHANNEL_NAME = "tmp-babstage-story"
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -33,8 +33,8 @@ so we call it first, then collect results from users
 users_store = []
 
 
-def get_user_ids(channel_name=OFFSTAGE_CHANNEL_NAME):
-    channel = get_offstage_channel_id()
+def get_user_ids(channel_name=BABSTAGE_CHANNEL_NAME):
+    channel = get_babstage_channel_id()
     _retrieve_user_ids_in_channel(channel)
     return users_store
 
@@ -69,7 +69,7 @@ Find the public channel or create one if not exist
 '''
 
 
-def get_offstage_channel_id(channel_name=OFFSTAGE_CHANNEL_NAME):
+def get_babstage_channel_id(channel_name=BABSTAGE_CHANNEL_NAME):
     try:
         # search for channels first
         # FIXME: search channel id using name in slack API?
@@ -118,7 +118,7 @@ def _send_channel_msg(channel_id, msg="Hello!"):
 
 def send_pub_msg(msg, users_to_invite=None, channel_id=None):
     if not channel_id:  # Allow overriding the channel id for debugging
-        channel_id = get_offstage_channel_id()
+        channel_id = get_babstage_channel_id()
 
     if channel_id == None:
         logger.error("cannot get the channel id!")
@@ -151,7 +151,7 @@ def send_mim_msg(group, msg="Hello!", channel_id=None):
 
 
 def get_conversations():
-    channel_id = get_offstage_channel_id()
+    channel_id = get_babstage_channel_id()
     result = client.conversations_history(channel=channel_id)
     conversation_history = result["messages"]
     return conversation_history
@@ -162,7 +162,7 @@ if __name__ == '__main__':
     # ids = get_user_ids()
     # for i, id in enumerate(ids):
     # print(i, id, get_realname(id))
-    #r = get_offstage_channel_id()
+    #r = get_babstage_channel_id()
     # _send_channel_msg(r)
     # reactions = get_conversations()[0]["reactions"]
     # stars = []
