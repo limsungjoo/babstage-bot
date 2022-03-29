@@ -10,7 +10,7 @@ from slack_sdk.errors import SlackApiError
 
 logger = logging.getLogger("slack")
 # 채널 이름에 맞게 수정 필요
-BABSTAGE_CHANNEL_NAME = "tmp-babstage-story"
+BABSTAGE_CHANNEL_NAME = "all-babstage-story"
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
