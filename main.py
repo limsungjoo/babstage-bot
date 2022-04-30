@@ -10,11 +10,11 @@ msg_template = '''
 조장님이 모임 장소와 시간 조율을 리드해주시고, 구글 캘린더에 일정을 남겨주세요~\n
 팀 소개, 요즘 하고 있는 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번달도 모두 모두 파이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n
-멋진 시간 보내신 사진등을 #tmp-babstage-story 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #all-babstage-story 에 올려주세요.\n
 '''
 # 1명일 경우
 msg_template1 = '''
-안타깝게도 <@{}>님은 금주 밥스테이지 매칭에 실패하였습니다. 다음주를 기대해주세요!\n
+안타깝게도 <@{}>님은 밥스테이지 매칭에 실패하였습니다. 자유롭게 합류할 팀을 찾아보시거나  알고리즘 업데이트를 요청해주세요!\n
 '''
 
 msg_template2 = '''
@@ -22,7 +22,7 @@ msg_template2 = '''
 조장님이 모임 장소와 시간 조율을 리드해주시고, 구글 캘린더에 일정을 남겨주세요~\n
 팀 소개, 요즘 하고 있는 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번달도 모두 모두 파이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n
-멋진 시간 보내신 사진등을 #tmp-babstage-story 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #all-babstage-story 에 올려주세요.\n
 '''
 
 msg_template3 = '''
@@ -30,7 +30,7 @@ msg_template3 = '''
 조장님이 모임 장소와 시간 조율을 리드해주시고, 구글 캘린더에 일정을 남겨주세요~\n
 팀 소개, 요즘 하고 있는 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번달도 모두 모두 파이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n
-멋진 시간 보내신 사진등을 #tmp-babstage-story 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #all-babstage-story 에 올려주세요.\n
 '''
 
 pub_msg_template = '''
@@ -43,7 +43,7 @@ pub_msg_demand = '''
 1) 자동으로 4명씩 조가 편성되어 DM 방이 만들어질 예정입니다. \n
 2) 봇이 정해주는 조장님은 시간과 장소를 조율하고 구글밋 일정을 만들어 초대해주세요. \n
 3) 멀리 계신 분이 있다면 온라인으로 보셔도 OK!! \n
-4) 모임이 끝난 뒤에는 #tmp-babstage-story에 사진을 올려주세요.
+4) 모임이 끝난 뒤에는 #all-babstage-story에 사진을 올려주세요.
 '''
 
 msg_template5 = '''
@@ -51,7 +51,7 @@ msg_template5 = '''
 조장님이 모임 장소와 시간 조율을 리드해주시고, 구글 캘린더에 일정을 남겨주세요~\n
 팀 소개, 요즘 하고 있는 일, 흥미로운 소식, 나누고 싶은 이야기 등으로 함께 편안한 시간 보내시며,\n
 이번달도 모두 모두 파이팅할 수 있는 기운을 나눠주세요 :female_superhero::male_superhero::rocket:\n
-멋진 시간 보내신 사진등을 #tmp-babstage-story 에 올려주세요.\n
+멋진 시간 보내신 사진등을 #all-babstage-story 에 올려주세요.\n
 '''
 
 if __name__ == '__main__':
