@@ -126,6 +126,36 @@ if __name__ == '__main__':
                 send_mim_msg(group, msg=msg)
             except:
                 pass
+            
+    #### 리팩토링 ####    
+    '''
+    def msg_temp_divide(msg_template):
+        msg = msg_template.format(*group)
+        send_mim_msg(group, msg=msg)
+        pairs += 1
+        return pairs
+    
+    for group in stars_divide_4:
+        if len(group) == 4:
+            msg = msg_temp_divide(msg_template)
+            
+        elif len(group) == 3:
+            msg = msg_temp_divide(msg_template3)
+            
+        elif len(group) == 2:
+            msg = msg_temp_divide(msg_template2)
+            
+        elif len(group) == 5:
+            msg = msg_temp_divide(msg_template5)
+            
+        else:
+            try:
+                msg = msg_template1.format(group[0])
+                send_mim_msg(group, msg=msg)
+            except:
+                continue
+    '''       
+     
         # print(group)
         # DEBUG
         # star1 = 'UKAUCTSCV' # kanghee
